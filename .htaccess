@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /codeigniter4-framework-v4.5.5-0-g2849e7f/public/
+
+# Mengarahkan semua permintaan ke index.php
+RewriteCond %{REQUEST_URI} ^system.*
+RewriteRule ^(.*)$ /index.php/$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /index.php/$1 [L]
